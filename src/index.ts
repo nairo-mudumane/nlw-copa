@@ -20,10 +20,10 @@ async function start() {
       orderBy: { createdAt: "asc" },
     });
 
-    return { message: "ok", total: pools.length, data: pools };
+    return { message: "ok", total: pools.length, data: pools.length };
   });
 
-  await fastify.listen({ port: 3333, host: "0.0.0.0" });
+  await fastify.listen({ port: 3333 /*host: "0.0.0.0"*/ });
 }
 
 start();
